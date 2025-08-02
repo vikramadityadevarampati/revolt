@@ -75,8 +75,11 @@ export const useVoiceChat = () => {
   }, []);
 
   const disconnect = useCallback(() => {
-    if (wsRef.current) {
+    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
       wsRef.current.send(JSON.stringify({ type: 'end_session' }));
+    }
+    
+    if (wsRef.current) {
       wsRef.current.close();
     }
     
@@ -154,7 +157,7 @@ export const useVoiceChat = () => {
   }, [isRecording]);
 
   const interrupt = useCallback(() => {
-    if (wsRef.current && isSpeaking) {
+    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN && isSpeaking) {
       wsRef.current.send(JSON.stringify({ type: 'interrupt' }));
       setIsSpeaking(false);
     }
