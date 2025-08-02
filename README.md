@@ -37,8 +37,8 @@ A real-time voice interface application that replicates the functionality of the
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd revolt-voice-chat
+   git clone <your-repository-url>
+   cd revolt-voice-assistant
    ```
 
 2. **Install dependencies**
@@ -135,7 +135,7 @@ The AI is configured with specific instructions about Revolt Motors:
 ## 📁 Project Structure
 
 ```
-revolt-voice-chat/
+revolt-voice-assistant/
 ├── server/
 │   ├── index.js              # Express server & WebSocket
 │   └── gemini-client.js      # Gemini API wrapper

@@ -1,7 +1,7 @@
 {
-  "name": "revolt-voice-chat",
+  "name": "revolt-voice-assistant",
   "version": "1.0.0",
-  "description": "Real-time voice interface for Revolt Motors using Gemini Live API",
+  "description": "Revolt Motors Voice Assistant - Real-time voice interface using Gemini Live API",
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
